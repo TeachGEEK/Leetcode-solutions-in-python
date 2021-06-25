@@ -73,6 +73,13 @@ class Solution:
             if a[k]>1 :
                 return k;
 
+
+Approch2:
+
+for i in range(len(nums)-1):
+    for j in range(i+1,len(nums)):
+	    if nums[i]==nums[j]:
+		    return nums[i]
     
     
   <!------------------------------------what if you have not distinct number and also you have to find duplicate number and also missing number ------------------------->
