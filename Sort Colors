@@ -59,11 +59,32 @@ class Solution:
                 high=high-1;
         return nums;
                 
-                
-                
+                 :
+Solution Approch 2 : Count the number of 0,1,2 then fill that number of 1,2,3 in the array : Time Complexity O(2n) ,Space Complexcity: o(1) 
 
 
-Solution Approch 2: Probably the wrost solution in tearms of optimisation : Bubble Short : Time Complexity O(n^2) , o(2) 
+class Solution:
+    def sortColors(self, nums: List[int]) -> None:
+        count0=0
+        count1=0
+        count2=0
+        for i in range(len(nums)):
+            if nums[i]==2:
+                count2+=1
+            if nums[i]==1:
+                count1+=1
+            if nums[i]==0:
+                count0+=1
+        for i in range(count0):
+            nums[i]=0
+        for i in range(count0,(count0+count1)):
+            nums[i]=1
+        for i in range(count0+count1,len(nums)):
+            nums[i]=2
+        return nums;
+
+
+Solution Approch 3: Probably the wrost solution in tearms of optimisation : Bubble Short : Time Complexity O(n^2) ,Space Complexcity: o(2) 
 
 
 class Solution:
